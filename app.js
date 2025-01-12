@@ -7,6 +7,8 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import cors from 'cors';
+
 
 connect();
 
@@ -15,6 +17,8 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
+
+app.use(cors());
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(express.json());
@@ -32,7 +36,7 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: 'http://localhost:3000',
+            url: 'https://backendapi-1bda.onrender.com',
         },
     ],
 };
