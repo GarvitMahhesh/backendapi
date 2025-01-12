@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.send('Hello , to check all the apis virtually go on https://backendapi-1bda.onrender.com/api/users/create');
+    res.send('Hello , to check all the apis virtually go on https://backendapi-1bda.onrender.com/api-docs');
 });
 const swaggerDefinition = {
     openapi: '3.0.0',
